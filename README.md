@@ -9,7 +9,7 @@ O response do login será um token de validação e o nome do médico.
 
 O médico poderá cadastrar, listar e detalhar uma consulta.
 
-
+Link da API: http://desafio.conexasaude.com.br/swagger-ui.html
 
 Requisitos:
 
