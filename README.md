@@ -7,7 +7,7 @@ Precisamos construir um front onde nossos médicos de plantão consigam agendar 
 Será necessário ter uma tela de login para que médicos da clínica Conexa Saúde consigam acessar a aplicação, utilizando email e senha.
 O response do login será um token de validação e o nome do médico.
 
-O médico poderá cadastrar, editar, excluir um paciente e também agendar um atendimento para o mesmo.
+O médico poderá cadastrar, listar e detalhar uma consulta.
 
 
 
