@@ -4,12 +4,12 @@ Descrição:
 
 Precisamos construir um front onde nossos médicos de plantão consigam agendar atendimentos para os pacientes e listar os atendimentos agendados.
 
-Será necessário ter uma tela de login para que médicos da clínica Conexa Saúde consigam acessar a aplicação, utilizando email e senha.
+Será necessário ter uma tela de login para que médicos da clínica Conexa Saúde consigam acessar a aplicação, utilizando email e senha (Podem realizar o login com qualquer usuário de teste).
 O response do login será um token de validação e o nome do médico.
 
 O médico poderá cadastrar, listar e detalhar uma consulta.
 
-Link da API: http://desafio.conexasaude.com.br/swagger-ui.html
+Link da API: http://desafio.conexasaude.com.br/swagger-ui.html#/desafio-rest
 
 Requisitos:
 
