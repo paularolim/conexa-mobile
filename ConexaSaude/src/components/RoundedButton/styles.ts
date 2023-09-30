@@ -6,7 +6,6 @@ export const Container = styled(TouchableOpacity)`
   height: 50px;
   background-color: ${({ theme }) => theme.colors.pink};
   border-radius: 12px;
-  top: 5px;
 `;
 
 export const styles = StyleSheet.create({
