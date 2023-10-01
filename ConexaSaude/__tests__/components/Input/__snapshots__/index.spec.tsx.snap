@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render component correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "flex-start",
+        "backgroundColor": "#FFFFFF",
+        "justifyContent": "center",
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "color": "#707683",
+          "fontSize": 18,
+        },
+      ]
+    }
+  >
+    Test Input
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderColor": "#707683",
+          "borderRadius": 4,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "minHeight": 48,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 8,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      style={
+        [
+          {
+            "color": "#000000",
+            "flexGrow": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+          },
+        ]
+      }
+      testID="field"
+    />
+  </View>
+</View>
+`;

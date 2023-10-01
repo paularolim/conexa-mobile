@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components/native';
 
 import { Icon } from '@components/Icon';
 
@@ -20,9 +20,9 @@ export function Input({ label, hasPasswordIcon, secureTextEntry, ...rest }: Inpu
     <Container>
       <Label>{label}</Label>
       <FieldContainer>
-        <Field secureTextEntry={hidePassword} {...rest} />
+        <Field testID="field" secureTextEntry={hidePassword} {...rest} />
         {hasPasswordIcon && (
-          <TouchableOpacity onPress={togglePasswordVisibility}>
+          <TouchableOpacity onPress={togglePasswordVisibility} testID="password-visibility-toggle">
             <Icon
               name={hidePassword ? 'eye-on' : 'eye-off'}
               width={25}
