@@ -16,7 +16,11 @@ describe('useAuth', () => {
     expect(result.current.isLogged).toBe(false);
 
     act(() => {
-      result.current.handleSaveToken('token_test');
+      result.current.handleSaveData({
+        email: 'mocked_email',
+        name: 'mocked_name',
+        token: 'mocked_token',
+      });
     });
 
     expect(result.current.isLogged).toBe(true);
@@ -28,7 +32,11 @@ describe('useAuth', () => {
     expect(result.current.isLogged).toBe(false);
 
     act(() => {
-      result.current.handleSaveToken('token_test');
+      result.current.handleSaveData({
+        email: 'mocked_email',
+        name: 'mocked_name',
+        token: 'mocked_token',
+      });
     });
 
     expect(result.current.isLogged).toBe(true);
