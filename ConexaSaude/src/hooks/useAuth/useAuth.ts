@@ -7,13 +7,13 @@ export function useAuth() {
 
   const isLogged = useMemo(() => Boolean(token), [token]);
 
-  const handleLogin = () => {
-    setToken('token_mock');
+  const handleSaveToken = (data: string) => {
+    setToken(data);
   };
 
   const handleLogout = () => {
     setToken(null);
   };
 
-  return { isLogged, handleLogin, handleLogout };
+  return { isLogged, handleSaveToken, handleLogout };
 }
