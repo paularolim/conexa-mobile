@@ -8,7 +8,14 @@ import { Input } from '@components/Input';
 import { Container, Logo, Section, Title } from './styles';
 import { LoginViewProps } from './types';
 
-export function LoginView({ handleLogin, handleDismissKeyboard }: LoginViewProps) {
+export function LoginView({
+  email,
+  password,
+  setEmail,
+  setPassword,
+  handleLogin,
+  handleDismissKeyboard,
+}: LoginViewProps) {
   return (
     <TouchableWithoutFeedback onPress={handleDismissKeyboard}>
       <Container>
@@ -22,8 +29,21 @@ export function LoginView({ handleLogin, handleDismissKeyboard }: LoginViewProps
         </Section>
 
         <Section space={16}>
-          <Input label="E-mail" keyboardType="email-address" autoCapitalize="none" />
-          <Input label="Senha" secureTextEntry hasPasswordIcon autoCapitalize="none" />
+          <Input
+            label="E-mail"
+            keyboardType="email-address"
+            autoCapitalize="none"
+            value={email}
+            onChangeText={setEmail}
+          />
+          <Input
+            label="Senha"
+            secureTextEntry
+            hasPasswordIcon
+            autoCapitalize="none"
+            value={password}
+            onChangeText={setPassword}
+          />
 
           <Button onPress={handleLogin}>Entrar</Button>
           <Button type="ghost">Esqueci a senha</Button>
