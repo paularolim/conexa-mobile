@@ -4,7 +4,7 @@ import { useAuthState } from './state';
 import { UserProps } from './types';
 
 export function useAuth() {
-  const { token, setToken, setName, setEmail } = useAuthState();
+  const { token, setToken, name, setName, setEmail, email } = useAuthState();
 
   const isLogged = useMemo(() => Boolean(token), [token]);
 
@@ -20,5 +20,5 @@ export function useAuth() {
     setEmail(null);
   };
 
-  return { isLogged, handleSaveData, handleLogout };
+  return { isLogged, handleSaveData, handleLogout, name, email, token };
 }
