@@ -1,24 +1,38 @@
 import { useNavigation } from '@react-navigation/native';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useAuth } from '@hooks/useAuth';
+import { useListAppointmentsRepository } from '@hooks/useListAppointments';
 
 export function useHomeViewModel() {
   const [refreshing, setRefreshing] = useState(false);
 
   const { navigate } = useNavigation();
+  const { getAppointments, appointments } = useListAppointmentsRepository();
   const { name } = useAuth();
+
+  const requestAppointments = useCallback(() => {
+    getAppointments();
+  }, [getAppointments]);
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-    setTimeout(() => {
+    getAppointments().finally(() => {
       setRefreshing(false);
-    }, 2000);
-  }, []);
+    });
+  }, [getAppointments]);
 
   const handlePressAppointment = useCallback(() => {
     navigate('Appointment' as never);
   }, [navigate]);
 
-  return { handlePressAppointment, refreshing, onRefresh, name };
+  useEffect(() => requestAppointments(), [requestAppointments]);
+
+  return {
+    handlePressAppointment,
+    refreshing,
+    onRefresh,
+    name,
+    appointments,
+  };
 }

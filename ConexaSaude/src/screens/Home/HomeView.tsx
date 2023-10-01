@@ -2,12 +2,18 @@ import { useCallback } from 'react';
 import { FlatList, ListRenderItemInfo, RefreshControl } from 'react-native';
 
 import { AppointmentCard } from '@components/AppointmentCard';
+import { Appointment } from '@hooks/useListAppointments/types';
 
-import { appointments } from './mock';
 import { Container, Footer, Header, Separator, Title } from './styles';
-import { HomeViewProps, MockAppointments } from './types';
+import { HomeViewProps } from './types';
 
-export function HomeView({ name, refreshing, onRefresh, handlePressAppointment }: HomeViewProps) {
+export function HomeView({
+  name,
+  refreshing,
+  onRefresh,
+  appointments,
+  handlePressAppointment,
+}: HomeViewProps) {
   const headerItem = useCallback(
     () => (
       <Header>
@@ -23,12 +29,8 @@ export function HomeView({ name, refreshing, onRefresh, handlePressAppointment }
   const separatorItem = useCallback(() => <Separator />, []);
 
   const renderItem = useCallback(
-    ({ item }: ListRenderItemInfo<MockAppointments>) => (
-      <AppointmentCard
-        date={item.dataConsulta}
-        patient={item.paciente}
-        onPress={handlePressAppointment}
-      />
+    ({ item }: ListRenderItemInfo<Appointment>) => (
+      <AppointmentCard date={item.date} patient={item.patient} onPress={handlePressAppointment} />
     ),
     [handlePressAppointment],
   );
@@ -36,7 +38,7 @@ export function HomeView({ name, refreshing, onRefresh, handlePressAppointment }
   return (
     <Container>
       <FlatList
-        data={appointments.data}
+        data={appointments || []}
         keyExtractor={(item) => `${item.id}`}
         renderItem={renderItem}
         ItemSeparatorComponent={separatorItem}
