@@ -4,8 +4,9 @@ import { Appointment } from '@screens/Appointment';
 import { Help } from '@screens/Help';
 
 import { Tabs } from './Tabs';
+import { MainRoutesParamList } from './types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<MainRoutesParamList>();
 
 export function MainRoutes() {
   return (

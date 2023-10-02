@@ -2,7 +2,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Login } from '@screens/Login';
 
-const Stack = createNativeStackNavigator();
+import { PublicRoutesParamList } from './types';
+
+const Stack = createNativeStackNavigator<PublicRoutesParamList>();
 
 export function PublicRoutes() {
   return (

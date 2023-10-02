@@ -9,9 +9,9 @@ import { Profile } from '@screens/Profile';
 
 import { CustomTabBarButton } from './components/CustomTabBarButton';
 import { styles } from './styles';
-import { TabBarIconProps } from './types';
+import { TabBarIconProps, TabsRoutesParamList } from './types';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<TabsRoutesParamList>();
 
 export function Tabs() {
   const { colors } = useTheme();
