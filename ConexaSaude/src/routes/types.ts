@@ -19,5 +19,4 @@ export interface PublicRoutesParamList extends ParamListBase {
 export interface MainRoutesParamList extends ParamListBase {
   Tabs: TabsRoutesParamList;
   Appointment: { id: number };
-  Help: undefined;
 }
