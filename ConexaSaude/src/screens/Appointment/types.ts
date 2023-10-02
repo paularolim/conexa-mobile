@@ -5,6 +5,8 @@ import { MainRoutesParamList } from '@routes/types';
 
 export interface AppointmentViewProps {
   appointment: Appointment | null;
+  loading: boolean;
+  error: boolean;
   showModal: boolean;
   handleDismissModal: () => void;
   handleShowCancelModal: () => void;

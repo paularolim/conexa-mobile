@@ -10,7 +10,7 @@ export function useAppointmentViewModel({ route }: ScreenProps) {
 
   const { id } = route.params;
 
-  const { getDetailAppointment, appointment } = useDetailAppointment();
+  const { getDetailAppointment, appointment, error, loading } = useDetailAppointment();
 
   const requestDetails = useCallback(() => {
     getDetailAppointment(id);
@@ -37,5 +37,7 @@ export function useAppointmentViewModel({ route }: ScreenProps) {
     handleDismissModal,
     showModal,
     appointment,
+    error,
+    loading,
   };
 }

@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 import { Button } from '@components/Button';
@@ -10,6 +10,7 @@ import {
   Avatar,
   Container,
   Content,
+  ErrorMessage,
   Footer,
   Header,
   PatientName,
@@ -24,8 +25,28 @@ export function AppointmentView({
   handleDismissModal,
   showModal,
   appointment,
+  error,
+  loading,
 }: AppointmentViewProps) {
   const { colors } = useTheme();
+
+  if (loading) {
+    return (
+      <Container>
+        <ActivityIndicator size="large" testID="activity-indicator" />
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container>
+        <ErrorMessage testID="error-message">
+          Não foi possível carregar os dados. Tente novamente mais tarde!
+        </ErrorMessage>
+      </Container>
+    );
+  }
 
   return (
     <Container>
@@ -58,6 +79,7 @@ export function AppointmentView({
       </Footer>
 
       <Modal
+        testID="confirm-modal"
         title="Cancelar consulta"
         description="Tem certeza que deseja cancelar a consulta?"
         primaryButtonLabel="Sim, cancelar"

@@ -46,3 +46,8 @@ export const SectionValue = styled(Text)`
 export const Footer = styled(View)`
   gap: 4px;
 `;
+
+export const ErrorMessage = styled(Text)`
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.red};
+`;
