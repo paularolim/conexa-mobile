@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 
-import { Icon } from '@components/Icon';
+import { Icon, IconName } from '@components/Icon';
 
 import { Wrapper } from '../../Wrapper';
 
@@ -76,6 +76,17 @@ describe('Icon component', () => {
       .create(
         <Wrapper>
           <Icon name="sign-out" />
+        </Wrapper>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should render null if no name is provided', () => {
+    const tree = renderer
+      .create(
+        <Wrapper>
+          <Icon name={'' as IconName} />
         </Wrapper>,
       )
       .toJSON();

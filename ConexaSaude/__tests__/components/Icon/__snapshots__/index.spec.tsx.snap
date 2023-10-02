@@ -62,3 +62,5 @@ exports[`Icon component should render User component correctly 1`] = `
   width={40}
 />
 `;
+
+exports[`Icon component should render null if no name is provided 1`] = `null`;
