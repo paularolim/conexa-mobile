@@ -25,6 +25,6 @@ export function Icon({ name, width = 40, height = 40, fill = 'none' }: IconProps
     case 'sign-out':
       return <SignOut width={width} height={height} stroke={fill} />;
     default:
-      throw new Error('Icon name is required');
+      return null;
   }
 }
