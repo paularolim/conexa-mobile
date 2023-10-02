@@ -1,13 +1,14 @@
-import { Appointment } from '@hooks/useListAppointments/types';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { appointments } from './mock';
+import { Appointment } from '@hooks/useListAppointments/types';
+import { TabsRoutesParamList } from '@routes/types';
 
 export interface HomeViewProps {
-  appointments: Appointment[];
+  appointments: Appointment[] | null;
   name: string;
   refreshing: boolean;
-  handlePressAppointment: () => void;
+  handlePressAppointment: (id: number) => void;
   onRefresh: () => void;
 }
 
-export type MockAppointments = (typeof appointments.data)[0];
+export type ScreenProps = NativeStackScreenProps<TabsRoutesParamList, 'Home'>;

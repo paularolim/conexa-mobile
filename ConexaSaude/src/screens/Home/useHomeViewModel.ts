@@ -1,13 +1,13 @@
-import { useNavigation } from '@react-navigation/native';
 import { useCallback, useEffect, useState } from 'react';
 
 import { useAuth } from '@hooks/useAuth';
 import { useListAppointmentsRepository } from '@hooks/useListAppointments';
 
-export function useHomeViewModel() {
+import { ScreenProps } from './types';
+
+export function useHomeViewModel({ navigation }: ScreenProps) {
   const [refreshing, setRefreshing] = useState(false);
 
-  const { navigate } = useNavigation();
   const { getAppointments, appointments } = useListAppointmentsRepository();
   const { name } = useAuth();
 
@@ -22,9 +22,12 @@ export function useHomeViewModel() {
     });
   }, [getAppointments]);
 
-  const handlePressAppointment = useCallback(() => {
-    navigate('Appointment' as never);
-  }, [navigate]);
+  const handlePressAppointment = useCallback(
+    (id: number) => {
+      navigation.navigate('Appointment', { id });
+    },
+    [navigation],
+  );
 
   useEffect(() => requestAppointments(), [requestAppointments]);
 
@@ -32,7 +35,7 @@ export function useHomeViewModel() {
     handlePressAppointment,
     refreshing,
     onRefresh,
-    name,
+    name: name || '',
     appointments,
   };
 }

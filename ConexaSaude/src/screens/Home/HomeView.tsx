@@ -30,7 +30,11 @@ export function HomeView({
 
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<Appointment>) => (
-      <AppointmentCard date={item.date} patient={item.patient} onPress={handlePressAppointment} />
+      <AppointmentCard
+        date={item.date}
+        patient={item.patient}
+        onPress={() => handlePressAppointment(item.id)}
+      />
     ),
     [handlePressAppointment],
   );
