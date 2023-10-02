@@ -4,7 +4,7 @@ import { AppointmentCard } from '@components/AppointmentCard';
 
 import { Wrapper } from '../../Wrapper';
 
-describe('Button component', () => {
+describe('AppointmentCard component', () => {
   it('should render default component correctly', () => {
     const tree = renderer
       .create(

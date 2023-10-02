@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component should render default component correctly 1`] = `
+exports[`AppointmentCard component should render default component correctly 1`] = `
 <View
   accessibilityState={
     {

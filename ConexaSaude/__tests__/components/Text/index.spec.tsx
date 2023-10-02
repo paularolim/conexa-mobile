@@ -4,7 +4,7 @@ import { Text } from '@components/Text';
 
 import { Wrapper } from '../../Wrapper';
 
-describe('Button component', () => {
+describe('Text component', () => {
   it('should render default component correctly', () => {
     const tree = renderer
       .create(
