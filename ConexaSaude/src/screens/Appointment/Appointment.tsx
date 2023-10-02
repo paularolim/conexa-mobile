@@ -1,11 +1,8 @@
-import { View } from 'react-native';
+import { AppointmentView } from './AppointmentView';
+import { ScreenProps } from './types';
+import { useAppointmentViewModel } from './useAppointmentViewModel';
 
-import { Text } from '@components/Text';
-
-export function Appointment() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Appointment</Text>
-    </View>
-  );
+export function Appointment(screenProps: ScreenProps) {
+  const props = useAppointmentViewModel(screenProps);
+  return <AppointmentView {...props} />;
 }
