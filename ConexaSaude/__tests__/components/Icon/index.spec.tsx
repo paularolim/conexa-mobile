@@ -70,4 +70,15 @@ describe('Icon component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('should render SignOut component correctly', () => {
+    const tree = renderer
+      .create(
+        <Wrapper>
+          <Icon name="sign-out" />
+        </Wrapper>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -45,6 +45,15 @@ exports[`Icon component should render Plus component correctly 1`] = `
 />
 `;
 
+exports[`Icon component should render SignOut component correctly 1`] = `
+<svg
+  data-file-name="SvgSignOut"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
 exports[`Icon component should render User component correctly 1`] = `
 <svg
   data-file-name="SvgUser"
