@@ -1,4 +1,5 @@
 export interface ModalProps {
+  testID?: string;
   title: string;
   description: string;
   primaryButtonLabel: string;

@@ -7,6 +7,7 @@ import { Container, Overlay, Section } from './styles';
 import { ModalProps } from './types';
 
 export function Modal({
+  testID,
   title,
   description,
   primaryButtonLabel,
@@ -17,7 +18,7 @@ export function Modal({
   confirm,
 }: ModalProps) {
   return (
-    <RNModal visible={visible} transparent>
+    <RNModal visible={visible} transparent testID={testID}>
       <TouchableWithoutFeedback onPress={dismissModal}>
         <Overlay>
           <Container>
