@@ -7,7 +7,10 @@ export interface HomeViewProps {
   appointments: Appointment[] | null;
   name: string;
   refreshing: boolean;
+  loading: boolean;
+  error: boolean;
   handlePressAppointment: (id: number) => void;
+  handleCreateAppointment: () => void;
   onRefresh: () => void;
 }
 

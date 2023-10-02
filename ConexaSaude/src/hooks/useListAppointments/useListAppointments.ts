@@ -6,11 +6,15 @@ import { client } from '@repositories/client';
 import { Appointment, AppointmentsResponse } from './types';
 
 export function useListAppointmentsRepository() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [appointments, setAppointments] = useState<Appointment[] | null>(null);
 
   const { token } = useAuth();
 
   const getAppointments = useCallback(async () => {
+    setLoading(true);
+    setError(false);
     const response = await client.get<AppointmentsResponse>('consultas', {
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -23,14 +27,20 @@ export function useListAppointmentsRepository() {
         patient: item.paciente,
       }));
       setAppointments(items);
+      setLoading(false);
+      setError(false);
       return;
     }
 
     setAppointments(null);
+    setLoading(false);
+    setError(true);
   }, [token]);
 
   return {
     getAppointments,
     appointments,
+    loading,
+    error,
   };
 }

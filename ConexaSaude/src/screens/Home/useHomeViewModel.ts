@@ -8,7 +8,7 @@ import { ScreenProps } from './types';
 export function useHomeViewModel({ navigation }: ScreenProps) {
   const [refreshing, setRefreshing] = useState(false);
 
-  const { getAppointments, appointments } = useListAppointmentsRepository();
+  const { getAppointments, appointments, loading, error } = useListAppointmentsRepository();
   const { name } = useAuth();
 
   const requestAppointments = useCallback(() => {
@@ -29,13 +29,20 @@ export function useHomeViewModel({ navigation }: ScreenProps) {
     [navigation],
   );
 
+  const handleCreateAppointment = () => {
+    navigation.navigate('CreateAppointment');
+  };
+
   useEffect(() => requestAppointments(), [requestAppointments]);
 
   return {
+    handleCreateAppointment,
     handlePressAppointment,
     refreshing,
     onRefresh,
     name: name || '',
     appointments,
+    loading,
+    error,
   };
 }

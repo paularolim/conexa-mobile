@@ -1,20 +1,39 @@
 import { useCallback } from 'react';
-import { FlatList, ListRenderItemInfo, RefreshControl } from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  ListRenderItemInfo,
+  RefreshControl,
+  ScrollView,
+} from 'react-native';
 
 import { AppointmentCard } from '@components/AppointmentCard';
+import { Button } from '@components/Button';
 import { Appointment } from '@hooks/useListAppointments/types';
 
-import { Container, Footer, Header, Separator, Title } from './styles';
+import {
+  Container,
+  EmptyContainer,
+  EmptyMessage,
+  ErrorMessage,
+  Footer,
+  Header,
+  Separator,
+  Title,
+} from './styles';
 import { HomeViewProps } from './types';
 
 export function HomeView({
   name,
   refreshing,
   onRefresh,
+  loading,
+  error,
   appointments,
   handlePressAppointment,
+  handleCreateAppointment,
 }: HomeViewProps) {
-  const headerItem = useCallback(
+  const HeaderItem = useCallback(
     () => (
       <Header>
         <Title>Olá {name}!</Title>
@@ -22,6 +41,18 @@ export function HomeView({
       </Header>
     ),
     [name],
+  );
+
+  const emptyItem = useCallback(
+    () => (
+      <EmptyContainer>
+        <EmptyMessage testID="empty-message">
+          Sem consultas para exibir. Que tal criar uma?
+        </EmptyMessage>
+        <Button onPress={handleCreateAppointment}>Criar consulta</Button>
+      </EmptyContainer>
+    ),
+    [handleCreateAppointment],
   );
 
   const footerItem = useCallback(() => <Footer />, []);
@@ -39,6 +70,30 @@ export function HomeView({
     [handlePressAppointment],
   );
 
+  if (loading && !refreshing) {
+    return (
+      <Container>
+        <HeaderItem />
+        <ActivityIndicator size="large" testID="activity-indicator" />
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container>
+        <ScrollView
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        >
+          <HeaderItem />
+          <ErrorMessage testID="error-message">
+            Não foi possível carregar os dados. Tente novamente mais tarde!
+          </ErrorMessage>
+        </ScrollView>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <FlatList
@@ -48,9 +103,10 @@ export function HomeView({
         ItemSeparatorComponent={separatorItem}
         showsVerticalScrollIndicator={false}
         stickyHeaderIndices={[0]}
-        ListHeaderComponent={headerItem}
+        ListHeaderComponent={HeaderItem}
         ListFooterComponent={footerItem}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        ListEmptyComponent={emptyItem}
       />
     </Container>
   );

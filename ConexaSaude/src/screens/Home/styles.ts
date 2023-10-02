@@ -22,6 +22,21 @@ export const Title = styled(Text)`
   color: ${({ theme }) => theme.colors.gray};
 `;
 
+export const EmptyContainer = styled(View)`
+  padding: 24px 0px;
+  gap: 8px;
+`;
+
+export const EmptyMessage = styled(Text)`
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.black};
+`;
+
+export const ErrorMessage = styled(Text)`
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.red};
+`;
+
 export const Separator = styled(View)`
   height: 10px;
 `;
