@@ -55,7 +55,7 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          "/^@assets|@components|@hooks|@repositories|@routes|@screens|@styles/",
+          "/^@assets|@components|@hooks|@routes|@screens|@styles|@utils/",
           [
             "parent",
             "sibling",
