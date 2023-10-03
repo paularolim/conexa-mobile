@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component should render component with type="error" correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#FFEBEE",
+        "borderRadius": 4,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+      },
+    ]
+  }
+  type="error"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "color": "#ED4337",
+          "fontSize": 18,
+        },
+      ]
+    }
+    type="error"
+  >
+    Error message
+  </Text>
+</View>
+`;
+
+exports[`Alert component should render component with type="warning" correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#FFF4EC",
+        "borderRadius": 4,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+      },
+    ]
+  }
+  type="warning"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "color": "#B95000",
+          "fontSize": 18,
+        },
+      ]
+    }
+    type="warning"
+  >
+    Warning message
+  </Text>
+</View>
+`;
