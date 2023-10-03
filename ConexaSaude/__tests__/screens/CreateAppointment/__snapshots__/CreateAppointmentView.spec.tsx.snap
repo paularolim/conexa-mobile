@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAppointmentView should render screen correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "gap": 12,
+        "paddingBottom": 12,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 12,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "color": "#707683",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Criar consulta
+  </Text>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 8,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#707683",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        Nome do paciente
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "borderColor": "#707683",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 48,
+              "paddingBottom": 8,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          style={
+            [
+              {
+                "color": "#000000",
+                "flexGrow": 1,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+              },
+            ]
+          }
+          testID="field"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#707683",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        Data da consulta
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "borderColor": "#707683",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 48,
+              "paddingBottom": 8,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          style={
+            [
+              {
+                "color": "#000000",
+                "flexGrow": 1,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+              },
+            ]
+          }
+          testID="field"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#707683",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        Observação
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "borderColor": "#707683",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 48,
+              "paddingBottom": 8,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          style={
+            [
+              {
+                "color": "#000000",
+                "flexGrow": 1,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+              },
+            ]
+          }
+          testID="field"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#2ED47A",
+        "borderRadius": 4,
+        "justifyContent": "center",
+        "maxWidth": "100%",
+        "opacity": 1,
+        "paddingBottom": 8,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+          },
+          {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          },
+        ]
+      }
+      type="filled"
+    >
+      Salvar
+    </Text>
+  </View>
+</View>
+`;
