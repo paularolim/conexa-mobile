@@ -17,6 +17,7 @@ describe('LoginView', () => {
             control={result.current.control}
             onSubmit={jest.fn()}
             handleDismissKeyboard={jest.fn()}
+            loading={false}
           />
         </Wrapper>,
       )
@@ -34,9 +35,26 @@ describe('LoginView', () => {
           onSubmit={jest.fn()}
           handleDismissKeyboard={jest.fn()}
           errorMessage="Error message"
+          loading={false}
         />
       </Wrapper>,
     );
     expect(getByText('Error message')).toBeTruthy();
+  });
+
+  it('should render screen correctly when is loading', () => {
+    const { result } = renderHook(() => useForm<{ email: string; password: string }>());
+
+    const { getByTestId } = render(
+      <Wrapper>
+        <LoginView
+          control={result.current.control}
+          onSubmit={jest.fn()}
+          handleDismissKeyboard={jest.fn()}
+          loading
+        />
+      </Wrapper>,
+    );
+    expect(getByTestId('activity-indicator')).toBeTruthy();
   });
 });
