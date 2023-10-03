@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SplashScreenView should render screen correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+        "paddingBottom": 0,
+        "paddingLeft": 48,
+        "paddingRight": 48,
+        "paddingTop": 0,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      {
+        "testUri": "../../../src/assets/images/logo.png",
+      }
+    }
+    style={
+      [
+        {
+          "maxWidth": "100%",
+          "resizeMode": "contain",
+        },
+      ]
+    }
+  />
+</View>
+`;
