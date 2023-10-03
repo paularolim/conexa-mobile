@@ -13,13 +13,13 @@ describe('useLoginViewModel', () => {
     expect(result.current.handleDismissKeyboard).toBeTruthy();
   });
 
-  it('should call handleLogin', () => {
+  it('should call onSubmit', () => {
     const { result } = renderHook(() => useLoginViewModel.useLoginViewModel());
 
     act(() => {
-      result.current.handleLogin();
+      result.current.onSubmit();
     });
 
-    expect(result.current.handleLogin).toBeTruthy();
+    expect(result.current.onSubmit).toBeTruthy();
   });
 });

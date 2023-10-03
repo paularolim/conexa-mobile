@@ -189,6 +189,7 @@ exports[`LoginView should render screen correctly 1`] = `
         <TextInput
           autoCapitalize="none"
           keyboardType="email-address"
+          onChangeText={[Function]}
           style={
             [
               {
@@ -254,6 +255,7 @@ exports[`LoginView should render screen correctly 1`] = `
       >
         <TextInput
           autoCapitalize="none"
+          onChangeText={[Function]}
           secureTextEntry={true}
           style={
             [
