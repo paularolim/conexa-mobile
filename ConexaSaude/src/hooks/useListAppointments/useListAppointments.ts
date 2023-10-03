@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { useAuth } from '@hooks/useAuth';
-import { client } from '@repositories/client';
+import { client } from '@utils/httpClient';
 
 import { Appointment, AppointmentsResponse } from './types';
 
