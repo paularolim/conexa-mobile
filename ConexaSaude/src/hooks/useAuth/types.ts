@@ -1,4 +1,5 @@
 export interface AuthStateProps {
+  _hasHydrated: boolean;
   token: string | null;
   setToken: (token: string | null) => void;
   name: string | null;

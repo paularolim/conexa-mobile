@@ -7,6 +7,7 @@ import { AuthStateProps } from './types';
 export const useAuthState = create(
   persist<AuthStateProps>(
     (set) => ({
+      _hasHydrated: false,
       token: null,
       setToken: (token: string | null) => set({ token }),
       name: null,
@@ -14,6 +15,12 @@ export const useAuthState = create(
       email: null,
       setEmail: (email: string | null) => set({ email }),
     }),
-    { name: 'useAuthState', storage: createJSONStorage(() => AsyncStorage) },
+    {
+      name: 'useAuthState',
+      storage: createJSONStorage(() => AsyncStorage),
+      onRehydrateStorage: () => () => {
+        useAuthState.setState({ _hasHydrated: true });
+      },
+    },
   ),
 );
