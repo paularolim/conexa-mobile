@@ -6,6 +6,7 @@ import { schema } from './validation';
 export type LoginSchema = yup.InferType<typeof schema>;
 
 export interface LoginViewProps {
+  loading: boolean;
   errorMessage?: string;
   handleDismissKeyboard: () => void;
   control: Control<LoginSchema, any>;

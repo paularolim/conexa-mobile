@@ -1,5 +1,5 @@
 import { Controller } from 'react-hook-form';
-import { TouchableWithoutFeedback } from 'react-native';
+import { ActivityIndicator, TouchableWithoutFeedback } from 'react-native';
 
 import logo from '@assets/images/logo.png';
 import { Alert } from '@components/Alert';
@@ -13,6 +13,7 @@ import { LoginViewProps } from './types';
 export function LoginView({
   control,
   errorMessage,
+  loading,
   handleDismissKeyboard,
   onSubmit,
 }: LoginViewProps) {
@@ -58,8 +59,14 @@ export function LoginView({
             )}
           />
 
-          <Button onPress={onSubmit}>Entrar</Button>
-          <Button type="ghost">Esqueci a senha</Button>
+          {loading ? (
+            <ActivityIndicator testID="activity-indicator" />
+          ) : (
+            <>
+              <Button onPress={onSubmit}>Entrar</Button>
+              <Button type="ghost">Esqueci a senha</Button>
+            </>
+          )}
         </Section>
       </Container>
     </TouchableWithoutFeedback>
