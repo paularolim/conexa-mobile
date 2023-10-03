@@ -19,22 +19,26 @@ export function useCreateAppointmentViewModel() {
   } = useForm<CreateAppointmentSchema>({ resolver: yupResolver(schema) });
 
   const errorMessage = useMemo(
-    () =>
-      errors.patient?.message ||
-      errors.date?.message ||
-      errors.observation?.message ||
-      (error ? 'Não foi possível salvar a consulta.' : null),
-    [error, errors.date?.message, errors.observation?.message, errors.patient?.message],
+    () => errors.patient?.message || errors.date?.message || errors.observation?.message || null,
+    [errors.date?.message, errors.observation?.message, errors.patient?.message],
   );
 
   const handleDismissKeyboard = () => Keyboard.dismiss();
 
+  const onSuccess = () => {
+    reset();
+    Alert.alert('Sucesso', 'A consulta foi salva!');
+  };
+
   const onSubmit = handleSubmit((data) => {
-    fetchCreateAppointment(data).then(() => {
-      reset();
-      Alert.alert('Sucesso', 'A consulta foi salva!');
-    });
+    fetchCreateAppointment(data, onSuccess);
   });
 
-  return { errorMessage, control, loading, onSubmit, handleDismissKeyboard };
+  return {
+    errorMessage: error ? 'Não foi possível salvar a consulta.' : errorMessage,
+    control,
+    loading,
+    onSubmit,
+    handleDismissKeyboard,
+  };
 }

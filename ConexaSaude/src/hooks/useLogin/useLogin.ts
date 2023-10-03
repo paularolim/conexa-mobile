@@ -26,6 +26,9 @@ export function useLogin() {
           });
           setLoading(false);
           setError(false);
+        } else {
+          setLoading(false);
+          setError(true);
         }
       } catch (reason) {
         setLoading(false);

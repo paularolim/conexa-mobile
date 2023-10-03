@@ -7,17 +7,13 @@ import { Appointment, AppointmentResponse } from './types';
 
 export function useDetailAppointment() {
   const [appointment, setAppointment] = useState<Appointment | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const { token } = useAuth();
 
   const getDetailAppointment = useCallback(
     async (id: number) => {
-      setAppointment(null);
-      setLoading(true);
-      setError(true);
-
       try {
         const { data } = await client.get<AppointmentResponse>(`consulta/${id}`, {
           headers: { Authorization: `Bearer ${token}` },

@@ -12,7 +12,7 @@ export function useCreateAppointment() {
   const { token } = useAuth();
 
   const fetchCreateAppointment = useCallback(
-    async ({ patient, date, observation }: CreateAppointment) => {
+    async ({ date, observation, patient }: CreateAppointment, onSuccess?: () => void) => {
       setLoading(true);
       setError(false);
 
@@ -30,6 +30,7 @@ export function useCreateAppointment() {
         setLoading(false);
         if (data.data.id) {
           setError(false);
+          if (onSuccess) onSuccess();
         } else {
           setError(true);
         }

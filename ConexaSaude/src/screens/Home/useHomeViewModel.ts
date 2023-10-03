@@ -1,25 +1,24 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { useAuth } from '@hooks/useAuth';
-import { useListAppointmentsRepository } from '@hooks/useListAppointments';
+import { useListAppointments } from '@hooks/useListAppointments';
 
 import { ScreenProps } from './types';
 
 export function useHomeViewModel({ navigation }: ScreenProps) {
   const [refreshing, setRefreshing] = useState(false);
 
-  const { getAppointments, appointments, loading, error } = useListAppointmentsRepository();
+  const { getAppointments, appointments, loading, error } = useListAppointments();
   const { name } = useAuth();
 
   const requestAppointments = useCallback(() => {
     getAppointments();
   }, [getAppointments]);
 
-  const onRefresh = useCallback(() => {
+  const onRefresh = useCallback(async () => {
     setRefreshing(true);
-    getAppointments().finally(() => {
-      setRefreshing(false);
-    });
+    await getAppointments();
+    setRefreshing(false);
   }, [getAppointments]);
 
   const handlePressAppointment = useCallback(

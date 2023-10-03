@@ -9,7 +9,7 @@ import {
 
 import { AppointmentCard } from '@components/AppointmentCard';
 import { Button } from '@components/Button';
-import { Appointment } from '@hooks/useListAppointments/types';
+import { Appointment } from '@hooks/useListAppointments';
 
 import {
   Container,
@@ -70,15 +70,6 @@ export function HomeView({
     [handlePressAppointment],
   );
 
-  if (loading) {
-    return (
-      <Container>
-        <HeaderItem />
-        <ActivityIndicator size="large" testID="activity-indicator" />
-      </Container>
-    );
-  }
-
   if (error) {
     return (
       <Container>
@@ -90,6 +81,15 @@ export function HomeView({
             Não foi possível carregar os dados. Tente novamente mais tarde!
           </ErrorMessage>
         </ScrollView>
+      </Container>
+    );
+  }
+
+  if ((loading && !refreshing) || (loading && !appointments)) {
+    return (
+      <Container>
+        <HeaderItem />
+        <ActivityIndicator size="large" testID="activity-indicator" />
       </Container>
     );
   }
