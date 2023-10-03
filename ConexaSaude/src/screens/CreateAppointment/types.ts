@@ -10,4 +10,5 @@ export interface CreateAppointmentViewProps {
   errorMessage?: string;
   control: Control<CreateAppointmentSchema, any>;
   onSubmit: (e?: React.BaseSyntheticEvent<object, any, any> | undefined) => Promise<void>;
+  handleDismissKeyboard: () => void;
 }

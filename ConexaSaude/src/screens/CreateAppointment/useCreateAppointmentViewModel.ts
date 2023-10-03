@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
-import { Alert } from 'react-native';
+import { Alert, Keyboard } from 'react-native';
 
 import { useCreateAppointment } from '@hooks/useCreateAppointment';
 
@@ -27,6 +27,8 @@ export function useCreateAppointmentViewModel() {
     [error, errors.date?.message, errors.observation?.message, errors.patient?.message],
   );
 
+  const handleDismissKeyboard = () => Keyboard.dismiss();
+
   const onSubmit = handleSubmit((data) => {
     fetchCreateAppointment(data).then(() => {
       reset();
@@ -34,5 +36,5 @@ export function useCreateAppointmentViewModel() {
     });
   });
 
-  return { errorMessage, control, loading, onSubmit };
+  return { errorMessage, control, loading, onSubmit, handleDismissKeyboard };
 }
