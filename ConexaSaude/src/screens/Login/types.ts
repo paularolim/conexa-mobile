@@ -1,9 +1,13 @@
-export interface LoginViewProps {
-  email: string;
-  setEmail: (text: string) => void;
-  password: string;
-  setPassword: (text: string) => void;
+import { Control } from 'react-hook-form';
+import * as yup from 'yup';
 
+import { schema } from './validation';
+
+export type LoginSchema = yup.InferType<typeof schema>;
+
+export interface LoginViewProps {
+  errorMessage?: string;
   handleDismissKeyboard: () => void;
-  handleLogin: () => void;
+  control: Control<LoginSchema, any>;
+  onSubmit: (e?: React.BaseSyntheticEvent<object, any, any> | undefined) => Promise<void>;
 }
