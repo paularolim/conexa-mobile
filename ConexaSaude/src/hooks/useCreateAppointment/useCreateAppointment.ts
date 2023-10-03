@@ -27,9 +27,11 @@ export function useCreateAppointment() {
           },
           { headers: { Authorization: `Bearer ${token}` } },
         );
+        setLoading(false);
         if (data.data.id) {
-          setLoading(false);
           setError(false);
+        } else {
+          setError(true);
         }
       } catch (reason) {
         setLoading(false);

@@ -70,7 +70,7 @@ export function HomeView({
     [handlePressAppointment],
   );
 
-  if (loading && !refreshing) {
+  if (loading) {
     return (
       <Container>
         <HeaderItem />

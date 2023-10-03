@@ -14,29 +14,34 @@ export function useDetailAppointment() {
 
   const getDetailAppointment = useCallback(
     async (id: number) => {
+      setAppointment(null);
       setLoading(true);
       setError(true);
 
-      const response = await client.get<AppointmentResponse>(`consulta/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      try {
+        const { data } = await client.get<AppointmentResponse>(`consulta/${id}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
-      if (response.data.data) {
-        const item: Appointment = {
-          date: response.data.data.dataConsulta,
-          id: response.data.data.id,
-          observation: response.data.data.observacao,
-          patient: response.data.data.paciente,
-        };
-        setAppointment(item);
         setLoading(false);
-        setError(false);
-        return;
+        if (data.data) {
+          const item: Appointment = {
+            date: data.data.dataConsulta,
+            id: data.data.id,
+            observation: data.data.observacao,
+            patient: data.data.paciente,
+          };
+          setAppointment(item);
+          setError(false);
+        } else {
+          setAppointment(null);
+          setError(true);
+        }
+      } catch (reason) {
+        setAppointment(null);
+        setLoading(false);
+        setError(true);
       }
-
-      setAppointment(null);
-      setLoading(false);
-      setError(true);
     },
     [token],
   );
