@@ -295,6 +295,7 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
         "borderRadius": 4,
         "justifyContent": "center",
         "maxWidth": "100%",
+        "minHeight": 48,
         "opacity": 1,
         "paddingBottom": 8,
         "paddingLeft": 16,

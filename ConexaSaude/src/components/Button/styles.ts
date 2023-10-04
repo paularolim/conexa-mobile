@@ -13,6 +13,7 @@ export const Container = styled(TouchableOpacity)<{ type: ButtonType }>`
   max-width: 100%;
   justify-content: center;
   align-items: center;
+  min-height: 48px;
 `;
 
 export const Label = styled(Text)<{ type: ButtonType }>`
