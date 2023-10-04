@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 
-import { ProfileView } from '@screens/Profile/ProfileView';
+import { ProfileView } from '@screens/Profile';
 
 import { Wrapper } from '../../Wrapper';
 

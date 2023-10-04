@@ -2,7 +2,7 @@ import { render, renderHook } from '@testing-library/react-native';
 import { useForm } from 'react-hook-form';
 import renderer from 'react-test-renderer';
 
-import { CreateAppointmentView } from '@screens/CreateAppointment/CreateAppointmentView';
+import { CreateAppointmentView } from '@screens/CreateAppointment';
 
 import { Wrapper } from '../../Wrapper';
 
@@ -20,6 +20,7 @@ describe('CreateAppointmentView', () => {
             control={result.current.control}
             onSubmit={jest.fn()}
             handleDismissKeyboard={jest.fn()}
+            errorMessage={null}
           />
         </Wrapper>,
       )
@@ -39,6 +40,7 @@ describe('CreateAppointmentView', () => {
           control={result.current.control}
           onSubmit={jest.fn()}
           handleDismissKeyboard={jest.fn()}
+          errorMessage={null}
         />
       </Wrapper>,
     );

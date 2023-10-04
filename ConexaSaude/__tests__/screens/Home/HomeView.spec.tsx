@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 
-import { HomeView } from '@screens/Home/HomeView';
+import { HomeView } from '@screens/Home';
 
 import { Wrapper } from '../../Wrapper';
 

@@ -1,25 +1,29 @@
-import { renderHook, act } from '@testing-library/react-native';
+import { renderHook, act, waitFor } from '@testing-library/react-native';
 
-import * as useLoginViewModel from '@screens/Login/useLoginViewModel';
+import { useLoginViewModel } from '@screens/Login';
 
 describe('useLoginViewModel', () => {
-  it('should call handleDismissKeyboard', () => {
-    const { result } = renderHook(() => useLoginViewModel.useLoginViewModel());
+  it('should call handleDismissKeyboard', async () => {
+    const { result } = renderHook(() => useLoginViewModel());
 
     act(() => {
       result.current.handleDismissKeyboard();
     });
 
-    expect(result.current.handleDismissKeyboard).toBeTruthy();
+    await waitFor(() => {
+      expect(result.current.handleDismissKeyboard).toBeTruthy();
+    });
   });
 
-  it('should call onSubmit', () => {
-    const { result } = renderHook(() => useLoginViewModel.useLoginViewModel());
+  it('should call onSubmit', async () => {
+    const { result } = renderHook(() => useLoginViewModel());
 
     act(() => {
       result.current.onSubmit();
     });
 
-    expect(result.current.onSubmit).toBeTruthy();
+    await waitFor(() => {
+      expect(result.current.onSubmit).toBeTruthy();
+    });
   });
 });

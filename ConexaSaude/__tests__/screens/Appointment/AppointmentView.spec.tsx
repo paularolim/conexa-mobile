@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 
-import { AppointmentView } from '@screens/Appointment/AppointmentView';
+import { AppointmentView } from '@screens/Appointment';
 
 import { Wrapper } from '../../Wrapper';
 

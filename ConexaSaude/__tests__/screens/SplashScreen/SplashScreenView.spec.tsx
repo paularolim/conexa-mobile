@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 
-import { SplashScreenView } from '@screens/SplashScreen/SplashScreenView';
+import { SplashScreenView } from '@screens/SplashScreen';
 
 import { Wrapper } from '../../Wrapper';
 

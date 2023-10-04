@@ -1,6 +1,7 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RouteProp } from '@react-navigation/native';
+import { NativeStackNavigationProp, NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { Appointment } from '@hooks/useListAppointments/types';
+import { Appointment } from '@hooks/useListAppointments';
 import { TabsRoutesParamList } from '@routes/types';
 
 export interface HomeViewProps {
@@ -11,7 +12,9 @@ export interface HomeViewProps {
   error: boolean;
   handlePressAppointment: (id: number) => void;
   handleCreateAppointment: () => void;
-  onRefresh: () => void;
+  onRefresh: () => Promise<void>;
 }
 
 export type ScreenProps = NativeStackScreenProps<TabsRoutesParamList, 'Home'>;
+export type NavigationType = NativeStackNavigationProp<TabsRoutesParamList, 'Home', undefined>;
+export type RouteType = RouteProp<TabsRoutesParamList, 'Home'>;

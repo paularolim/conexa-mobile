@@ -2,7 +2,7 @@ import { render, renderHook } from '@testing-library/react-native';
 import { useForm } from 'react-hook-form';
 import renderer from 'react-test-renderer';
 
-import { LoginView } from '@screens/Login/LoginView';
+import { LoginView } from '@screens/Login';
 
 import { Wrapper } from '../../Wrapper';
 
@@ -18,6 +18,7 @@ describe('LoginView', () => {
             onSubmit={jest.fn()}
             handleDismissKeyboard={jest.fn()}
             loading={false}
+            errorMessage={null}
           />
         </Wrapper>,
       )
@@ -52,6 +53,7 @@ describe('LoginView', () => {
           onSubmit={jest.fn()}
           handleDismissKeyboard={jest.fn()}
           loading
+          errorMessage={null}
         />
       </Wrapper>,
     );

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-native';
 
-import { useProfileViewModel } from '@screens/Profile/useProfileViewModel';
+import { useProfileViewModel } from '@screens/Profile';
 
 describe('useProfileViewModel', () => {
   it('should has props', () => {

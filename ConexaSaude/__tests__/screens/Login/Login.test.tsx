@@ -4,7 +4,7 @@ import { Login } from '@screens/Login';
 
 import { Wrapper } from '../../Wrapper';
 
-describe('LoginView', () => {
+describe('Login', () => {
   it('should render screen correctly', () => {
     const tree = renderer
       .create(

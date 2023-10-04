@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginView should render screen correctly 1`] = `
+exports[`Login should render screen correctly 1`] = `
 <View
   accessibilityState={
     {
@@ -350,6 +350,7 @@ exports[`LoginView should render screen correctly 1`] = `
           "borderRadius": 4,
           "justifyContent": "center",
           "maxWidth": "100%",
+          "minHeight": 48,
           "opacity": 1,
           "paddingBottom": 8,
           "paddingLeft": 16,
@@ -410,6 +411,7 @@ exports[`LoginView should render screen correctly 1`] = `
           "borderRadius": 4,
           "justifyContent": "center",
           "maxWidth": "100%",
+          "minHeight": 48,
           "opacity": 1,
           "paddingBottom": 8,
           "paddingLeft": 16,
