@@ -39,10 +39,6 @@ exports[`Input component should render component correctly 1`] = `
           "borderWidth": 1,
           "flexDirection": "row",
           "minHeight": 48,
-          "paddingBottom": 8,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "paddingTop": 8,
           "width": "100%",
         },
       ]
@@ -53,11 +49,13 @@ exports[`Input component should render component correctly 1`] = `
         [
           {
             "color": "#000000",
+            "flexBasis": 0,
             "flexGrow": 1,
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 0,
+            "flexShrink": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
           },
         ]
       }
