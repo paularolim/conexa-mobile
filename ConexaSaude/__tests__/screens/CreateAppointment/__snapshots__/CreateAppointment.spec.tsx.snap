@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAppointment should render screen correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "gap": 12,
+        "paddingBottom": 12,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 12,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+        },
+        {
+          "color": "#707683",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Criar consulta
+  </Text>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 8,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFEBEE",
+            "borderRadius": 4,
+            "paddingBottom": 8,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+            "paddingTop": 8,
+          },
+        ]
+      }
+      type="error"
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#ED4337",
+              "fontSize": 18,
+            },
+          ]
+        }
+        type="error"
+      >
+        mocked_error
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#2ED47A",
+        "borderRadius": 4,
+        "justifyContent": "center",
+        "maxWidth": "100%",
+        "minHeight": 48,
+        "opacity": 1,
+        "paddingBottom": 8,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+          },
+          {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          },
+        ]
+      }
+      type="filled"
+    >
+      Salvar
+    </Text>
+  </View>
+</View>
+`;

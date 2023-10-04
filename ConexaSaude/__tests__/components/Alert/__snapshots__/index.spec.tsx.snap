@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alert component should render component with type="error" correctly 1`] = `
+exports[`Alert component snapshots should render component with type="error" correctly 1`] = `
 <View
   style={
     [
@@ -35,7 +35,7 @@ exports[`Alert component should render component with type="error" correctly 1`]
 </View>
 `;
 
-exports[`Alert component should render component with type="warning" correctly 1`] = `
+exports[`Alert component snapshots should render component with type="warning" correctly 1`] = `
 <View
   style={
     [

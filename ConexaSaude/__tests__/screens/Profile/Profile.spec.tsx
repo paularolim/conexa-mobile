@@ -1,17 +1,17 @@
 import renderer from 'react-test-renderer';
 
-import { Login } from '@screens/Login';
+import { Profile } from '@screens/Profile';
 
 import { Wrapper } from '../../Wrapper';
 
-jest.mock('@screens/Home/useHomeViewModel', () => ({ useLoginViewModel: jest.fn() }));
+jest.mock('@screens/Profile/useProfileViewModel', () => ({ useProfileViewModel: jest.fn() }));
 
-describe('Login', () => {
+describe('Profile', () => {
   it('should render screen correctly', () => {
     const tree = renderer
       .create(
         <Wrapper>
-          <Login />
+          <Profile />
         </Wrapper>,
       )
       .toJSON();
