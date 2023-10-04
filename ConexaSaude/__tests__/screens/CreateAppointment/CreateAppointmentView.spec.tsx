@@ -6,10 +6,12 @@ import { CreateAppointmentView } from '@screens/CreateAppointment';
 
 import { Wrapper } from '../../Wrapper';
 
+jest.useFakeTimers().setSystemTime(new Date('2023-10-04T12:21:45.926Z'));
+
 describe('CreateAppointmentView', () => {
   it('should render screen correctly', () => {
     const { result } = renderHook(() =>
-      useForm<{ patient: string; date: string; observation: string }>(),
+      useForm<{ patient: string; date: Date; observation: string }>(),
     );
 
     const tree = renderer
@@ -21,6 +23,8 @@ describe('CreateAppointmentView', () => {
             onSubmit={jest.fn()}
             handleDismissKeyboard={jest.fn()}
             errorMessage={null}
+            isDateModalOpen={false}
+            handleToggleDateModal={jest.fn()}
           />
         </Wrapper>,
       )
@@ -30,7 +34,7 @@ describe('CreateAppointmentView', () => {
 
   it('should render screen correctly on loading', () => {
     const { result } = renderHook(() =>
-      useForm<{ patient: string; date: string; observation: string }>(),
+      useForm<{ patient: string; date: Date; observation: string }>(),
     );
 
     const { getByTestId } = render(
@@ -41,6 +45,8 @@ describe('CreateAppointmentView', () => {
           onSubmit={jest.fn()}
           handleDismissKeyboard={jest.fn()}
           errorMessage={null}
+          isDateModalOpen={false}
+          handleToggleDateModal={jest.fn()}
         />
       </Wrapper>,
     );
@@ -49,7 +55,7 @@ describe('CreateAppointmentView', () => {
 
   it('should render screen correctly on loading', () => {
     const { result } = renderHook(() =>
-      useForm<{ patient: string; date: string; observation: string }>(),
+      useForm<{ patient: string; date: Date; observation: string }>(),
     );
 
     const { getByText } = render(
@@ -60,6 +66,8 @@ describe('CreateAppointmentView', () => {
           control={result.current.control}
           onSubmit={jest.fn()}
           handleDismissKeyboard={jest.fn()}
+          isDateModalOpen={false}
+          handleToggleDateModal={jest.fn()}
         />
       </Wrapper>,
     );

@@ -18,7 +18,7 @@ describe('InputDatePicker component', () => {
           <InputDatePicker
             label="Test Input"
             isModalOpen={false}
-            value={new Date()}
+            value={new Date('2023-10-04T12:21:45.926Z')}
             displayedValue="2023-10-10"
             openModal={jest.fn()}
             onConfirm={jest.fn()}
@@ -33,7 +33,7 @@ describe('InputDatePicker component', () => {
   it('should render with label and displayedValue', () => {
     const mockProps = {
       label: 'Date',
-      value: new Date(),
+      value: new Date('2023-10-04T12:21:45.926Z'),
       displayedValue: '2023-10-10',
       isModalOpen: false,
       openModal: jest.fn(),
@@ -54,7 +54,7 @@ describe('InputDatePicker component', () => {
   it('should render value if displayedValue is not provided', () => {
     const mockProps = {
       label: 'Date',
-      value: new Date(),
+      value: new Date('2023-10-04T12:21:45.926Z'),
       isModalOpen: false,
       openModal: jest.fn(),
       onCancel: jest.fn(),
@@ -73,7 +73,7 @@ describe('InputDatePicker component', () => {
   it('should call openModal when pressed', () => {
     const mockProps = {
       label: 'Date',
-      value: new Date(),
+      value: new Date('2023-10-04T12:21:45.926Z'),
       displayedValue: '2023-10-10',
       isModalOpen: false,
       openModal: jest.fn(),
@@ -95,7 +95,7 @@ describe('InputDatePicker component', () => {
   it('should render the DatePicker modal when isModalOpen is true', () => {
     const mockProps = {
       label: 'Date',
-      value: new Date(),
+      value: new Date('2023-10-04T12:21:45.926Z'),
       displayedValue: '2023-10-10',
       isModalOpen: true,
       openModal: jest.fn(),

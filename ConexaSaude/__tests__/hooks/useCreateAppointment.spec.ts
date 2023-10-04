@@ -26,7 +26,7 @@ describe('useCreateAppointment', () => {
 
     act(() => {
       result.current.fetchCreateAppointment({
-        date: 'mocked_date',
+        date: new Date('2023-10-04T12:21:45.926Z'),
         observation: 'mocked_observation',
         patient: 'mocked_patient',
       });
@@ -63,7 +63,7 @@ describe('useCreateAppointment', () => {
     await act(async () => {
       await result.current.fetchCreateAppointment(
         {
-          date: 'mocked_date',
+          date: new Date('2023-10-04T12:21:45.926Z'),
           observation: 'mocked_observation',
           patient: 'mocked_patient',
         },
@@ -87,7 +87,7 @@ describe('useCreateAppointment', () => {
 
     await act(async () => {
       await result.current.fetchCreateAppointment({
-        date: 'mocked_date',
+        date: new Date('2023-10-04T12:21:45.926Z'),
         observation: 'mocked_observation',
         patient: 'mocked_patient',
       });
@@ -108,7 +108,7 @@ describe('useCreateAppointment', () => {
 
     await act(async () => {
       await result.current.fetchCreateAppointment({
-        date: 'mocked_date',
+        date: new Date('2023-10-04T12:21:45.926Z'),
         observation: 'mocked_observation',
         patient: 'mocked_patient',
       });
