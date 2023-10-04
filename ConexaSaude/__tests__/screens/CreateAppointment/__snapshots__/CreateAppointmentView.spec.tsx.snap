@@ -102,10 +102,6 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
               "borderWidth": 1,
               "flexDirection": "row",
               "minHeight": 48,
-              "paddingBottom": 8,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 8,
               "width": "100%",
             },
           ]
@@ -117,11 +113,13 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
             [
               {
                 "color": "#000000",
+                "flexBasis": 0,
                 "flexGrow": 1,
-                "paddingBottom": 0,
-                "paddingLeft": 0,
-                "paddingRight": 0,
-                "paddingTop": 0,
+                "flexShrink": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 8,
               },
             ]
           }
@@ -130,68 +128,103 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
       </View>
     </View>
     <View
-      style={
-        [
-          {
-            "alignItems": "flex-start",
-            "backgroundColor": "#FFFFFF",
-            "justifyContent": "center",
-            "width": "100%",
-          },
-        ]
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
       }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
     >
-      <Text
-        style={
-          [
-            {
-              "color": "#000000",
-            },
-            {
-              "color": "#707683",
-              "fontSize": 18,
-            },
-          ]
-        }
-      >
-        Data da consulta
-      </Text>
       <View
-        style={
-          [
-            {
-              "alignItems": "center",
-              "borderColor": "#707683",
-              "borderRadius": 4,
-              "borderStyle": "solid",
-              "borderWidth": 1,
-              "flexDirection": "row",
-              "minHeight": 48,
-              "paddingBottom": 8,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 8,
-              "width": "100%",
-            },
-          ]
-        }
+        pointerEvents="none"
       >
-        <TextInput
-          onChangeText={[Function]}
+        <View
           style={
             [
               {
-                "color": "#000000",
-                "flexGrow": 1,
-                "paddingBottom": 0,
-                "paddingLeft": 0,
-                "paddingRight": 0,
-                "paddingTop": 0,
+                "alignItems": "flex-start",
+                "backgroundColor": "#FFFFFF",
+                "justifyContent": "center",
+                "width": "100%",
               },
             ]
           }
-          testID="field"
-        />
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#000000",
+                },
+                {
+                  "color": "#707683",
+                  "fontSize": 18,
+                },
+              ]
+            }
+          >
+            Data da consulta
+          </Text>
+          <View
+            style={
+              [
+                {
+                  "alignItems": "center",
+                  "borderColor": "#707683",
+                  "borderRadius": 4,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "minHeight": 48,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <TextInput
+              editable={false}
+              style={
+                [
+                  {
+                    "color": "#000000",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "paddingBottom": 8,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
+                    "paddingTop": 8,
+                  },
+                ]
+              }
+              testID="field"
+              value="04/10/2023 - 9:21"
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View
@@ -232,10 +265,6 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
               "borderWidth": 1,
               "flexDirection": "row",
               "minHeight": 48,
-              "paddingBottom": 8,
-              "paddingLeft": 16,
-              "paddingRight": 16,
-              "paddingTop": 8,
               "width": "100%",
             },
           ]
@@ -247,11 +276,13 @@ exports[`CreateAppointmentView should render screen correctly 1`] = `
             [
               {
                 "color": "#000000",
+                "flexBasis": 0,
                 "flexGrow": 1,
-                "paddingBottom": 0,
-                "paddingLeft": 0,
-                "paddingRight": 0,
-                "paddingTop": 0,
+                "flexShrink": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 8,
               },
             ]
           }

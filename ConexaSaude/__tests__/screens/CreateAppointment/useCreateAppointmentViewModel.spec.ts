@@ -31,4 +31,16 @@ describe('useCreateAppointmentViewModel', () => {
       expect(result.current.handleDismissKeyboard).toBeTruthy();
     });
   });
+
+  it('should call handleToggleDateModal', () => {
+    const { result } = renderHook(() => useCreateAppointmentViewModel());
+
+    expect(result.current.isDateModalOpen).toBe(false);
+
+    act(() => {
+      result.current.handleToggleDateModal();
+    });
+
+    expect(result.current.isDateModalOpen).toBe(true);
+  });
 });
