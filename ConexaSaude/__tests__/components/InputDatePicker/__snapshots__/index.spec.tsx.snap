@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputDatePicker component should render component correctly 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+  >
+    <View
+      pointerEvents="none"
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "flex-start",
+              "backgroundColor": "#FFFFFF",
+              "justifyContent": "center",
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#000000",
+              },
+              {
+                "color": "#707683",
+                "fontSize": 18,
+              },
+            ]
+          }
+        >
+          Test Input
+        </Text>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "borderColor": "#707683",
+                "borderRadius": 4,
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "minHeight": 48,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <TextInput
+            editable={false}
+            style={
+              [
+                {
+                  "color": "#000000",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "paddingBottom": 8,
+                  "paddingLeft": 16,
+                  "paddingRight": 16,
+                  "paddingTop": 8,
+                },
+              ]
+            }
+            testID="field"
+            value="2023-10-10"
+          />
+        </View>
+      </View>
+    </View>
+  </View>,
+  <View
+    style={
+      [
+        {
+          "alignItems": "flex-start",
+          "backgroundColor": "#FFFFFF",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+          },
+          {
+            "color": "#707683",
+            "fontSize": 18,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "borderColor": "#707683",
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "minHeight": 48,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <TextInput
+        date={2023-10-04T12:21:45.926Z}
+        modal={true}
+        onCancel={[MockFunction]}
+        onConfirm={[MockFunction]}
+        open={false}
+        style={
+          [
+            {
+              "color": "#000000",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "paddingBottom": 8,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            },
+          ]
+        }
+        testID="input-date-picker-modal"
+      />
+    </View>
+  </View>,
+]
+`;
