@@ -10,7 +10,18 @@ describe('useAuth', () => {
     });
   });
 
-  it('should set token', () => {
+  it('should return initial state', () => {
+    const { result } = renderHook(() => useAuth());
+
+    expect(result.current.isLogged).toBe(false);
+    expect(result.current.handleSaveData).toBeTruthy();
+    expect(result.current.handleLogout).toBeTruthy();
+    expect(result.current.name).toBe(null);
+    expect(result.current.email).toBe(null);
+    expect(result.current.token).toBe(null);
+  });
+
+  it('should set auth data', () => {
     const { result } = renderHook(() => useAuth());
 
     expect(result.current.isLogged).toBe(false);
@@ -24,6 +35,9 @@ describe('useAuth', () => {
     });
 
     expect(result.current.isLogged).toBe(true);
+    expect(result.current.email).toBe('mocked_email');
+    expect(result.current.name).toBe('mocked_name');
+    expect(result.current.token).toBe('mocked_token');
   });
 
   it('should logout', () => {
@@ -40,11 +54,17 @@ describe('useAuth', () => {
     });
 
     expect(result.current.isLogged).toBe(true);
+    expect(result.current.email).toBe('mocked_email');
+    expect(result.current.name).toBe('mocked_name');
+    expect(result.current.token).toBe('mocked_token');
 
     act(() => {
       result.current.handleLogout();
     });
 
     expect(result.current.isLogged).toBe(false);
+    expect(result.current.email).toBe(null);
+    expect(result.current.name).toBe(null);
+    expect(result.current.token).toBe(null);
   });
 });
