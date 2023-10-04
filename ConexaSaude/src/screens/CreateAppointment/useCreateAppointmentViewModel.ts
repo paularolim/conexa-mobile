@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Alert, Keyboard } from 'react-native';
 
@@ -9,6 +9,8 @@ import { CreateAppointmentSchema } from './types';
 import { schema } from './validation';
 
 export function useCreateAppointmentViewModel() {
+  const [isDateModalOpen, setIsDateModalOpen] = useState(false);
+
   const { fetchCreateAppointment, error, loading } = useCreateAppointment();
 
   const {
@@ -25,7 +27,10 @@ export function useCreateAppointmentViewModel() {
 
   const handleDismissKeyboard = () => Keyboard.dismiss();
 
+  const handleToggleDateModal = () => setIsDateModalOpen((prev) => !prev);
+
   const onSuccess = () => {
+    handleDismissKeyboard();
     reset();
     Alert.alert('Sucesso', 'A consulta foi salva!');
   };
@@ -38,6 +43,8 @@ export function useCreateAppointmentViewModel() {
     errorMessage: error ? 'Não foi possível salvar a consulta.' : errorMessage,
     control,
     loading,
+    isDateModalOpen,
+    handleToggleDateModal,
     onSubmit,
     handleDismissKeyboard,
   };

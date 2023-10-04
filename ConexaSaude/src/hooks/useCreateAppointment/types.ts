@@ -1,6 +1,6 @@
 export interface CreateAppointment {
   patient: string;
-  date: string;
+  date: Date;
   observation: string;
 }
 

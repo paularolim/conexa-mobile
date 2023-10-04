@@ -4,16 +4,20 @@ import { ActivityIndicator, TouchableWithoutFeedback } from 'react-native';
 import { Alert } from '@components/Alert';
 import { Button } from '@components/Button';
 import { Input } from '@components/Input';
+import { InputDatePicker } from '@components/InputDatePicker';
+import { dateFormatter } from '@utils/formatter';
 
 import { Container, Form, Title } from './styles';
 import { CreateAppointmentViewProps } from './types';
 
 export function CreateAppointmentView({
   control,
+  isDateModalOpen,
   loading,
   errorMessage,
   onSubmit,
   handleDismissKeyboard,
+  handleToggleDateModal,
 }: CreateAppointmentViewProps) {
   return (
     <TouchableWithoutFeedback onPress={handleDismissKeyboard}>
@@ -28,12 +32,23 @@ export function CreateAppointmentView({
               <Input label="Nome do paciente" value={value} onChangeText={onChange} />
             )}
           />
-          {/* TODO: improve ux for date input */}
           <Controller
             name="date"
             control={control}
+            defaultValue={new Date()}
             render={({ field: { value, onChange } }) => (
-              <Input label="Data da consulta" value={value} onChangeText={onChange} />
+              <InputDatePicker
+                label="Data da consulta"
+                isModalOpen={isDateModalOpen}
+                value={value || new Date()}
+                displayedValue={dateFormatter('DD/MM/YYYY - H:mm', value)}
+                openModal={handleToggleDateModal}
+                onConfirm={(date: Date) => {
+                  handleToggleDateModal();
+                  onChange(date);
+                }}
+                onCancel={handleToggleDateModal}
+              />
             )}
           />
           <Controller

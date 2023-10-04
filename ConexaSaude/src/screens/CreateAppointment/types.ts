@@ -8,6 +8,8 @@ export type CreateAppointmentSchema = yup.InferType<typeof schema>;
 export interface CreateAppointmentViewProps {
   loading: boolean;
   errorMessage: string | null;
+  isDateModalOpen: boolean;
+  handleToggleDateModal: () => void;
   control: Control<CreateAppointmentSchema, any>;
   onSubmit: (e?: React.BaseSyntheticEvent<object, any, any> | undefined) => Promise<void>;
   handleDismissKeyboard: () => void;
