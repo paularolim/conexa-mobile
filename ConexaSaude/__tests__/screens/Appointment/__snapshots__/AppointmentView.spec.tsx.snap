@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppointmentView should render screen correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "gap": 16,
+        "paddingBottom": 24,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "gap": 16,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "gap": 16,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "#C2CFE0",
+              "borderRadius": 40,
+              "height": 80,
+              "overflow": "hidden",
+              "width": 80,
+            },
+          ]
+        }
+      >
+        <svg
+          data-file-name="SvgUser"
+          height={80}
+          stroke="#F28080"
+          width={80}
+        />
+      </View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "fontSize": 22,
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        mocked_patient
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "flexDirection": "row",
+            "gap": 10,
+          },
+        ]
+      }
+    >
+      <View
+        primary={true}
+        style={
+          [
+            {
+              "backgroundColor": "#F28080",
+              "borderRadius": 2,
+              "height": 5,
+              "width": 80,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "#C2CFE0",
+              "borderRadius": 2,
+              "height": 5,
+              "width": 80,
+            },
+          ]
+        }
+      />
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "fontSize": 18,
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        Data da consulta
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        mocked_date
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "fontSize": 18,
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        Observações
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        mocked_info
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "gap": 4,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#2ED47A",
+          "borderRadius": 4,
+          "justifyContent": "center",
+          "maxWidth": "100%",
+          "minHeight": 48,
+          "opacity": 1,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+            },
+          ]
+        }
+        type="filled"
+      >
+        Iniciar consulta
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 4,
+          "justifyContent": "center",
+          "maxWidth": "100%",
+          "minHeight": 48,
+          "opacity": 1,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#109CF1",
+              "fontSize": 18,
+            },
+          ]
+        }
+        type="ghost"
+      >
+        Cancelar consulta
+      </Text>
+    </View>
+  </View>
+  <Modal
+    hardwareAccelerated={false}
+    testID="confirm-modal"
+    transparent={true}
+    visible={false}
+  />
+</View>
+`;

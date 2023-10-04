@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should render Calendar component correctly 1`] = `
+<svg
+  data-file-name="SvgCalendar"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render EyeOff component correctly 1`] = `
+<svg
+  data-file-name="SvgEyeOff"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render EyeOn component correctly 1`] = `
+<svg
+  data-file-name="SvgEyeOn"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render House component correctly 1`] = `
+<svg
+  data-file-name="SvgHouse"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render Plus component correctly 1`] = `
+<svg
+  data-file-name="SvgPlus"
+  fill="none"
+  height={40}
+  width={40}
+/>
+`;
+
+exports[`Icon component should render SignOut component correctly 1`] = `
+<svg
+  data-file-name="SvgSignOut"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render User component correctly 1`] = `
+<svg
+  data-file-name="SvgUser"
+  height={40}
+  stroke="none"
+  width={40}
+/>
+`;
+
+exports[`Icon component should render null if no name is provided 1`] = `null`;

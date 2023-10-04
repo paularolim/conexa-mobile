@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render screen correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "gap": 20,
+        "justifyContent": "center",
+        "paddingBottom": 0,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "gap": 0,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        {
+          "testUri": "../../../src/assets/images/logo.png",
+        }
+      }
+      style={
+        [
+          {
+            "maxWidth": "60%",
+            "resizeMode": "contain",
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    space={8}
+    style={
+      [
+        {
+          "gap": 8,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+          },
+          {
+            "color": "#707683",
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      Para entrar, utilize as credenciais que você recebeu via e-mail
+    </Text>
+    <View
+      style={
+        [
+          {
+            "flexDirection": "row",
+            "gap": 10,
+          },
+        ]
+      }
+    >
+      <View
+        primary={true}
+        style={
+          [
+            {
+              "backgroundColor": "#F28080",
+              "borderRadius": 2,
+              "height": 5,
+              "width": 80,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "#C2CFE0",
+              "borderRadius": 2,
+              "height": 5,
+              "width": 80,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    space={16}
+    style={
+      [
+        {
+          "gap": 16,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#707683",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        E-mail
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "borderColor": "#707683",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 48,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          style={
+            [
+              {
+                "color": "#000000",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 8,
+              },
+            ]
+          }
+          testID="field"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "flex-start",
+            "backgroundColor": "#FFFFFF",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#707683",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+        Senha
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "borderColor": "#707683",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "minHeight": 48,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoCapitalize="none"
+          onChangeText={[Function]}
+          secureTextEntry={true}
+          style={
+            [
+              {
+                "color": "#000000",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingBottom": 8,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 8,
+              },
+            ]
+          }
+          testID="field"
+        />
+        <View
+          style={
+            [
+              {
+                "paddingRight": 16,
+              },
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="password-visibility-toggle"
+          >
+            <svg
+              data-file-name="SvgEyeOn"
+              height={25}
+              stroke="#707683"
+              width={25}
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#2ED47A",
+          "borderRadius": 4,
+          "justifyContent": "center",
+          "maxWidth": "100%",
+          "minHeight": 48,
+          "opacity": 1,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#FFFFFF",
+              "fontSize": 18,
+            },
+          ]
+        }
+        type="filled"
+      >
+        Entrar
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 4,
+          "justifyContent": "center",
+          "maxWidth": "100%",
+          "minHeight": 48,
+          "opacity": 1,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#000000",
+            },
+            {
+              "color": "#109CF1",
+              "fontSize": 18,
+            },
+          ]
+        }
+        type="ghost"
+      >
+        Esqueci a senha
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,42 @@
+import { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
+import { useTheme } from 'styled-components/native';
+
+import { Icon } from '@components/Icon';
+
+import { Container, Field, FieldContainer, IconContainer, Label } from './styles';
+import { InputProps } from './types';
+
+export function Input({ label, hasPasswordIcon, secureTextEntry, ...rest }: InputProps) {
+  const [hidePassword, setHidePassword] = useState(secureTextEntry);
+
+  const { colors } = useTheme();
+
+  const togglePasswordVisibility = () => {
+    setHidePassword((prev) => !prev);
+  };
+
+  return (
+    <Container>
+      <Label>{label}</Label>
+      <FieldContainer>
+        <Field testID="field" secureTextEntry={hidePassword} {...rest} />
+        {hasPasswordIcon && (
+          <IconContainer>
+            <TouchableOpacity
+              onPress={togglePasswordVisibility}
+              testID="password-visibility-toggle"
+            >
+              <Icon
+                name={hidePassword ? 'eye-on' : 'eye-off'}
+                width={25}
+                height={25}
+                fill={colors.gray}
+              />
+            </TouchableOpacity>
+          </IconContainer>
+        )}
+      </FieldContainer>
+    </Container>
+  );
+}

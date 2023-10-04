@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider component should render default component correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "flexDirection": "row",
+        "gap": 10,
+      },
+    ]
+  }
+>
+  <View
+    primary={true}
+    style={
+      [
+        {
+          "backgroundColor": "#F28080",
+          "borderRadius": 2,
+          "height": 5,
+          "width": 80,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#C2CFE0",
+          "borderRadius": 2,
+          "height": 5,
+          "width": 80,
+        },
+      ]
+    }
+  />
+</View>
+`;
